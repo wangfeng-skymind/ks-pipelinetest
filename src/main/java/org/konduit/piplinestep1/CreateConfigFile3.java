@@ -44,7 +44,7 @@ public class CreateConfigFile3 {
                 .height(28) // 这将调整图像高度（不需要ImageResizeStep）
                 .width(28) // 这将调整图像宽度（不需要ImageResizeStep）
                 .channelLayout(NDChannelLayout.GRAYSCALE) // 这将只包含一个通道（用于灰度）
-                .format(NDFormat.CHANNELS_FIRST) // 这将首先保持通道尺寸。例如，[1，28，28]与'CHANNEL\u FIRST'比较，而[28，28，1]与'CHANNEL\u LAST'
+                .format(NDFormat.CHANNELS_FIRST) // 这将首先保持通道尺寸。例如，[1，28，28]与'CHANNEL FIRST'比较，而[28，28，1]与'CHANNEL LAST'
                 .includeMinibatchDim(true) // 这将在最终数组中包含一个额外维度。例如，与带有“false”的[1，28，28]相比，它看起来像带有“true”的[1，1，28，28]。
                 .dataType(NDArrayType.FLOAT) // 输出数组将包含“float”数据类型的值。
                 .aspectRatioHandling(AspectRatioHandling.CENTER_CROP); // 这将在中心裁剪图像，以确保图像不会因调整大小操作而扭曲。

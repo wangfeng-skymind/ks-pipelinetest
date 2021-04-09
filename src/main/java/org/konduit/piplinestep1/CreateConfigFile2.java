@@ -70,7 +70,6 @@ public class CreateConfigFile2 {
                             .aspectRatioHandling(AspectRatioHandling.PAD)
                             .inputNames("imagesd") // The output will be with the same key which will contain the resized image
             );
-
             input = input.then("crop",
                     new ImageCropStep()
                             .imageName("imagesd") // Name of the incoming image, this will be the output key of the image as well.

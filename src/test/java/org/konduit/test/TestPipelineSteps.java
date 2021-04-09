@@ -28,7 +28,7 @@ public class TestPipelineSteps {
                 new VertxOptions(),
                 new DeploymentOptions(),
                 new InferenceConfiguration().pipeline(
-                        CreateConfigFile2.getPipeline(true, false)
+                        CreateConfigFile2.getPipeline(true, true)
                 ),
                 handler -> {
                     if (handler.succeeded()) {
