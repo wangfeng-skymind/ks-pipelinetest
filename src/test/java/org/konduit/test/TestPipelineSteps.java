@@ -12,6 +12,7 @@ import io.vertx.ext.unit.junit.VertxUnitRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.konduit.piplinestep1.CreateConfigFile1;
+import org.konduit.piplinestep1.CreateConfigFile2;
 import org.nd4j.common.io.ClassPathResource;
 
 import java.io.IOException;
@@ -27,7 +28,7 @@ public class TestPipelineSteps {
                 new VertxOptions(),
                 new DeploymentOptions(),
                 new InferenceConfiguration().pipeline(
-                        CreateConfigFile1.getPipeline(false)
+                        CreateConfigFile2.getPipeline(true, false)
                 ),
                 handler -> {
                     if (handler.succeeded()) {
